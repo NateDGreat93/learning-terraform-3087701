@@ -78,11 +78,6 @@ resource "aws_security_group_rule" "blog_everything_out" {
   protocol    = "-1"
   cidr_blocks = ["0.0.0.0/0"]
 
-output "blog_instance_public_dns" {
-  description = "ec2-35-164-207-31.us-west-2.compute.amazonaws.com"
-  value       = aws_instance.blog.public_dns
-}
-
 
 security_group_id = aws_security_group.blog.id
 }
